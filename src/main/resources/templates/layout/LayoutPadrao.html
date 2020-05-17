@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
     <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
         <title>Clindor</title>
         
         <link th:href="@{layout/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
@@ -15,113 +14,25 @@
     </head>
  <body id="page-top">
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
-          <i class="fas fa-hospital-alt"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Clindor</div>
-      </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Menu titulo
-      </div>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Componente 01</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Componentes:</h6>
-            <a class="collapse-item" href="buttons.html">0001</a>
-            <a class="collapse-item" href="cards.html">0002</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Componente 02</span></a>
-      </li>
-
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
-    </ul>
-    <!-- End of Sidebar -->
-
-
-	<div id="content-wrapper" class="d-flex flex-column">
-	      <div id="content">
-				<!-- Navbar -->
-				<div th:replace="layout/fragments/Navbar :: navbar"></div>
-				
-				<!-- Footer -->
-				<div th:replace="layout/fragments/Footer :: footer"></div>
-	      </div>
-	 </div>    
-  </div>
-
-
-
+ 	<div id="wrapper">
+	   	<div th:replace="layout/fragments/Menu :: menu"> </div>
+		
+<!-- 			<div id="content-wrapper" class="d-flex flex-column"> -->
+<!-- 		   		<div id="content"> -->
+<!-- 					<div th:replace="layout/fragments/Navbar :: navbar"></div> -->
+<!-- 		   		</div> -->
+		
+<!-- 		 		<div th:replace="layout/fragments/Footer :: footer"></div> -->
+<!-- 		 	</div> -->
+ 	
+ 	</div>
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+ 
   <!-- Bootstrap core JavaScript-->
   <script th:src="@{layout/vendor/jquery/jquery.min.js}"></script>
   <script th:src="@{layout/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
