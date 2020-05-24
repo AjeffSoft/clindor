@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -19,7 +20,7 @@ public class ServicoController {
 	private ServicoService service;
 	
 	@GetMapping("/novo")
-	public ModelAndView novo() {
+	public ModelAndView novo(Servico servico) {
 		return new ModelAndView("/servico/CadastroServico");
 	}
 	
@@ -28,8 +29,13 @@ public class ServicoController {
 		ModelAndView mv = new ModelAndView("/servico/PesquisarServicos");
 		List<Servico> servs = service.listarTodos();
 		mv.addObject("servs", servs);
-		servs.forEach(s -> System.out.println(s));
 		return mv;
+	}
+	
+	@PostMapping("novo")
+	public ModelAndView salvar (Servico servico) {
+		service.salvar(servico);
+		return new ModelAndView("/servico/PesquisarServicos");
 	}
 
 }
