@@ -9,11 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table
 public class Servico implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -32,6 +34,10 @@ public class Servico implements Serializable{
 	@PrePersist @PreUpdate	
 	private void prePersistUpdate() {
 		this.nome = this.nome.toUpperCase();
+	}
+	
+	public Servico() {
+		// TODO Auto-generated constructor stub
 	}
 
 

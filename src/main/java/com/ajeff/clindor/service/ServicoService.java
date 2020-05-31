@@ -19,7 +19,7 @@ public class ServicoService {
 		return repository.findAll();
 	}
 
-	@Transactional
+	@Transactional(readOnly = false)
 	public void salvar(Servico servico) {
 		repository.save(servico);
 	}

@@ -29,7 +29,7 @@
 					</nav>
 					
 					<div class="container-fluid">
-						<form role="form" method="post" th:object="${servico}" th:action="@{servicos/novo}">
+						<form role="form" method="POST" th:object="${servico}" th:action="@{/servicos/novo}">
 							<div class="row">
 								<div class="col-sm-8  form-group">
 									<label for="nome" class="control-label">Nome*</label>
@@ -38,7 +38,7 @@
 
 								<div class="col-sm-2  form-group">
 									<label for="valor" class="control-label">Valor*</label>
-									<input id="valor" type="text" class="form-control" placeholder="R$ 0,00"/ th:field="*{valor}">
+									<input id="valor" type="text" class="form-control" placeholder="R$ 0,00" th:field="*{valor}">
 								</div>
 
 								<div class="col-sm-2  form-group">
